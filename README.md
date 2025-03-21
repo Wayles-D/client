@@ -1,52 +1,27 @@
-# MERN stack E-Burger shop
+# 🍽️ Eggys Place - Online Restaurant Website
 
-### Back-End Development Languages
+Eggys Place is a modern restaurant web app that allows users to browse food items, manage their cart, and track their orders with a sleek and responsive UI.
 
-- Nodejs(Express.js)
+## 🚀 Features
+- 🔹 **Dynamic Menu Display** - View different food categories (Burgers, Drinks, Salads, etc.)
+- 🔹 **Cart Management** - Add, remove, and update items in the cart
+- 🔹 **Authentication System** - Sign up, log in, and access a personalized dashboard
+- 🔹 **Order Tracking** - View order history in the user dashboard
+- 🔹 **Product Details Page** - Click on any product image see its full description
+- 🔹 **Fully Responsive** - Works seamlessly on all devices
 
-### Front-End Development Deliverables :
+## 🛠️ Tech Stack
+- **Frontend:** React, Tailwind CSS, React Router DOM
+- **State Management:** useState, useContext
+- **Form Handling:** React Hook Form + Yup
+- **Notifications:** React Toastify
 
-- Web Design
+## 📸 Screenshots
+**Home Screensot:** ![image](https://github.com/user-attachments/assets/2b26b24f-e321-420c-9530-86dc499401ce)
 
-- Website Development
+**Cart Screenshot:** ![image](https://github.com/user-attachments/assets/240eabd8-0697-49e3-b8a3-c0de8d1f14e9)
 
-- Web Application
+**Product Description Page:** (Click on Product-Image to Navigate) ![image](https://github.com/user-attachments/assets/f8a501c2-0bc1-49ef-a441-790b8013aa04)
 
-### Front-End Development Languages
 
-- Javascript(ReactJs)
 
-### Front-End Development Skills
-
-- Git And GitHub
-
-- React Bootstrap
-
-- Figma design
-
-## Project description :
-
-This is a simple responsive mern stack Hr app which was used to teach my trainees how to build MERN stack app.
-
-The project has an admin dashboard(for employees with admin role) and employee dashboard(for registered employees only).
-
-Only the admin can register employees,approve leaves,create tasks,create teams,see all tasks,see all employees.
-
-Employees only sign in,reset password,update profile,apply for leave.
-
-#### Tools Used
-
-- Npm packages(Toastify)
-
-- React-hook-form
-
-- Bycrypt.js
-
-## Hr App Website Preview :
-
-Desktop design:
-<img
-  src="https://res.cloudinary.com/eguono/image/upload/v1741087060/eggys-place/hero-img-png_sdu6hz.png"
-  alt="Alt text"
-  title="desktop-view"
-  style="display: inline-block; margin: 0 auto; max-width: 300px">
