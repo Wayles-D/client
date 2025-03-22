@@ -37,33 +37,40 @@ const Cart = () => {
     return (
         <main className='container mx-auto bg-[#1E1E1E] text-white min-h-screen p-10'>
             {cart.length === 0 ? (
-                <h1 className='text-center text-xl font-bold'>😞 Oops! Looks like you haven’t ordered yet. How about you search for something? 🤷‍♂ </h1>
+                <h1 className='text-center text-xl font-bold'>😞 Oops! Looks like you haven’t ordered yet. How about you search for something? 🙂‍↔️ </h1>
             ) : (
                 <div className='grid lg:grid-cols-3 gap-8'>
                     <section className='col-span-2 bg-[#2F2F2F] p-6 rounded-lg shadow-lg'>
                         <h1 className='text-xl font-bold mb-4'>Carts ({cart.length})</h1>
                         <div>
                             {cart.map(({ _id, image, title, price, quantity }) => (
-                                <div key={_id} className='flex justify-between items-center p-4 bg-[#252422] rounded-lg mb-4'>
-                                    <div className='flex items-center gap-4'>
-                                        <img src={image} alt={title} className='w-20 h-20 rounded-lg' />
-                                        <div>
-                                            <h2 className='font-semibold'>{title}</h2>
-                                            <p className="text-gray-400 text-sm">{new Date().toLocaleDateString("en-GB")}</p>
-                                            <h3 className='text-yellow-400'>₦{Number(price).toLocaleString()}</h3>
+                                <div key={_id} className='p-4 bg-[#252422] rounded-lg mb-4'>
+                                    <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4'>
+                                        {/* Image & Details */}
+                                        <div className='flex items-center gap-4'>
+                                            <img src={image} alt={title} className='w-20 h-20 rounded-lg' />
+                                            <div>
+                                                <h2 className='font-semibold'>{title}</h2>
+                                                <p className="text-gray-400 text-sm">{new Date().toLocaleDateString("en-GB")}</p>
+                                                <h3 className='text-yellow-400'>₦{Number(price).toLocaleString()}</h3>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className='flex items-center gap-4'>
-                                        <button className='bg-yellow-500 text-black px-3 py-1 rounded-full' onClick={() => handleInc(_id)}>+</button>
-                                        <p className='font-bold'>{quantity}</p>
-                                        <button 
-                                            className={`bg-yellow-500 text-black px-3 py-1 rounded-full ${quantity === 1 ? 'opacity-50 cursor-not-allowed' : ''}`} 
-                                            onClick={() => handleDec(_id)} 
-                                            disabled={quantity === 1}
-                                        >
-                                            -
-                                        </button>
-                                        <img src={deleteIcon} alt='Delete' className='cursor-pointer w-6' onClick={() => handleRemove(_id)} />
+
+                                        {/* Buttons (Moved Below on Mobile) */}
+                                        <div className='flex flex-col sm:flex-row  gap-2 mt-3 sm:mt-0'>
+                                            <div className='flex  gap-2'>
+                                                <button className='bg-yellow-500 text-black px-3 py-1 rounded-full' onClick={() => handleInc(_id)}>+</button>
+                                                <p className='font-bold'>{quantity}</p>
+                                                <button 
+                                                    className={`bg-yellow-500 text-black px-3 py-1 rounded-full ${quantity === 1 ? 'opacity-50 cursor-not-allowed' : ''}`} 
+                                                    onClick={() => handleDec(_id)} 
+                                                    disabled={quantity === 1}
+                                                >
+                                                    -
+                                                </button>
+                                            <img src={deleteIcon} alt='Delete' className='cursor-pointer w-6 ml-auto' onClick={() => handleRemove(_id)} />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
