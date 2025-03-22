@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../Uimodal/AuthModal"; 
 
@@ -11,12 +11,22 @@ import LoginImg from "../assets/LoginImg.svg";
 const Navbar = ({ cart }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
-  const [selectedLocation, setSelectedLocation] = useState("Location"); // ✅ Default location
+  const [selectedLocation, setSelectedLocation] = useState("Location");
 
   const locations = ["Lagos", "Abuja", "Benin"];
 
+  // ✅ Load location from localStorage when component mounts
+  useEffect(() => {
+    const savedLocation = localStorage.getItem("selectedLocation");
+    if (savedLocation) {
+      setSelectedLocation(savedLocation);
+    }
+  }, []);
+
+  // ✅ Update location state & save to localStorage
   const handleLocationChange = (newLocation) => {
     setSelectedLocation(newLocation);
+    localStorage.setItem("selectedLocation", newLocation);
   };
 
   const uniqueCartCount = cart.length; 
@@ -33,7 +43,7 @@ const Navbar = ({ cart }) => {
             <div className="flex items-center gap-1 md:gap-2">
               <img src={LocationImg} alt="Location" className="w-[16px] h-auto" />
               <h4 className="text-[#F0F0F0] text-[16px] md:text-[18px] font-[500]">
-                {selectedLocation} {/* ✅ Dynamic Location */}
+                {selectedLocation} {/* ✅ Dynamic & Persistent Location */}
               </h4>
               <div className="dropdown dropdown-center">
                 <button tabIndex={0} className="m-0 p-1 bg-transparent">

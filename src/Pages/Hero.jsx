@@ -24,7 +24,7 @@ const Hero = () => {
             <button className="rounded-[31px] h-[50px] w-[160px] sm:h-[60px] sm:w-[180px] bg-[#B67B0F] text-white font-bold hover:bg-white hover:text-black">
               Order Now!
             </button>
-            <button className="rounded-[32px] h-[50px] w-[160px] sm:h-[60px] sm:w-[180px] bg-white text-black font-bold">
+            <button className="rounded-[32px] h-[50px] w-[160px] sm:h-[60px] sm:w-[180px] bg-white text-black font-bold hover:bg-[#B67B0F] hover:text-white">
               View Menu
             </button>
           </div>

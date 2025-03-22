@@ -101,7 +101,7 @@ const SignUp = ({ toggleAuth }) => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full p-2 bg-[#B67B0F] text-white rounded-full mt-2 hover:bg-[#a06d0e]"
+          className="w-full p-2 bg-[#B67B0F] text-white rounded-full mt-2 hover:bg-white hover:text-black"
         >
           Sign Up
         </button>
