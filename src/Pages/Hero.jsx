@@ -21,7 +21,7 @@ const Hero = () => {
             Savor the flavor! Explore our delicious menu and order now for a taste sensation!
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
-            <button className="rounded-[31px] h-[50px] w-[160px] sm:h-[60px] sm:w-[180px] bg-[#B67B0F] text-white font-bold">
+            <button className="rounded-[31px] h-[50px] w-[160px] sm:h-[60px] sm:w-[180px] bg-[#B67B0F] text-white font-bold hover:bg-white hover:text-black">
               Order Now!
             </button>
             <button className="rounded-[32px] h-[50px] w-[160px] sm:h-[60px] sm:w-[180px] bg-white text-black font-bold">

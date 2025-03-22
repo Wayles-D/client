@@ -58,7 +58,7 @@ const ProductDetails = ({ handleAddToCart }) => {
               handleAddToCart(product);
               toast.success(`${product.title} added to cart!`);
             }}
-            className="mt-6 w-full max-w-[300px] h-12 rounded-[31px] bg-[#B67B0F] text-white font-bold border-none shadow-none cursor-pointer hover:bg-[#9a640c] transition duration-300"
+            className="mt-6 w-full max-w-[300px] h-12 rounded-[31px] bg-[#B67B0F] text-white font-bold border-none shadow-none cursor-pointer hover:bg-[#9a640c] transition duration-300 hover:bg-white hover:text-black"
           >
             Add To Cart
           </button>
@@ -108,7 +108,7 @@ const ProductDetails = ({ handleAddToCart }) => {
                         handleAddToCart(item);
                         toast.success(`${item.title} added to cart!`);
                       }}
-                      className="w-full h-12 rounded-[31px] bg-[#B67B0F] text-white font-bold border-none shadow-none cursor-pointer"
+                      className="w-full h-12 rounded-[31px] bg-[#B67B0F] text-white font-bold border-none shadow-none cursor-pointer hover:bg-white hover:text-black"
                     >
                       Add To Cart
                     </button>

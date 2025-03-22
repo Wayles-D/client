@@ -50,7 +50,7 @@ const CheeseBurgers = ({ handleAddToCart }) => {
                   <div className="card-actions mt-4">
                     <button
                       onClick={() => handleAddToCart(item)}
-                      className="w-full h-12 rounded-[31px] bg-[#B67B0F] text-white font-bold border-none shadow-none cursor-pointer"
+                      className="w-full h-12 rounded-[31px] bg-[#B67B0F] text-white font-bold border-none shadow-none cursor-pointer hover:bg-white hover:text-black"
                     >
                       Add To Cart
                     </button>

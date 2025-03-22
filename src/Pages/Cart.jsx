@@ -59,10 +59,10 @@ const Cart = () => {
                                         {/* Buttons (Moved Below on Mobile) */}
                                         <div className='flex flex-col sm:flex-row  gap-2 mt-3 sm:mt-0'>
                                             <div className='flex  gap-2'>
-                                                <button className='bg-yellow-500 text-black px-3 py-1 rounded-full' onClick={() => handleInc(_id)}>+</button>
+                                                <button className='bg-yellow-500 text-black px-3 py-1 rounded-full hover:bg-white hover:text-black' onClick={() => handleInc(_id)}>+</button>
                                                 <p className='font-bold'>{quantity}</p>
                                                 <button 
-                                                    className={`bg-yellow-500 text-black px-3 py-1 rounded-full ${quantity === 1 ? 'opacity-50 cursor-not-allowed' : ''}`} 
+                                                    className={`bg-yellow-500 text-black px-3 py-1 rounded-full hover:bg-white hover:text-black ${quantity === 1 ? 'opacity-50 cursor-not-allowed ' : ''}`} 
                                                     onClick={() => handleDec(_id)} 
                                                     disabled={quantity === 1}
                                                 >
@@ -97,7 +97,7 @@ const Cart = () => {
                                 <h1 className='text-green-500'>₦{(totalPrice + 2500).toLocaleString()}</h1>
                             </div>
                         </div>
-                        <button className='w-full bg-yellow-500 text-black py-3 mt-4 rounded-lg font-bold'>Check Out</button>
+                        <button className='w-full bg-yellow-500 text-black py-3 mt-4 rounded-lg font-bold hover:bg-white hover:text-black'>Check Out</button>
                     </section>
                 </div>
             )}
